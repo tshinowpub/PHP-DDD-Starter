@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    php-ddd-starter-web:
+        container_name: php-ddd-starter-web
+        image: php-ddd-starter-web/web
+        build: ./web
+        volumes:
+            - ../../:/var/www/php-ddd-starter-web
+        ports:
+            - '80:80'
+        networks:
+            php-ddd-starter:
+                ipv4_address: 172.31.0.11
+
+networks:
+    php-ddd-starter:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.31.0.0/24
