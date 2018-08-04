@@ -1,0 +1,17 @@
+{
+    "name": "root/php-ddd-starter-web",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PHPDDDStarter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPDDDStarter\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3"
+    }
+}
